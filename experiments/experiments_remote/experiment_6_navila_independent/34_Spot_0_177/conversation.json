@@ -1,0 +1,1907 @@
+[
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "The robot is _____. (Select all that apply)",
+            "Possible answers: \"moving ahead\", \"turning left\", \"turning right\"",
+            "Please provide the answer in JSON format as follows where you may select one or two possible answers:",
+            "{\"answer\": [\"<answer1>\", \"<answer2>\"]}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": [\"turning left\", \"turning right\"]}"
+        ],
+        "latency_sec": 0.5237740911543369
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "In the beginning, person 1 is _____ the robot.",
+            "Possible answers: \"ahead of\", \"to the left of\", \"to the right of\", \"behind\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"ahead of\"}"
+        ],
+        "latency_sec": 0.37464203499257565
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "At the end, person 1 is _____ the robot.",
+            "Possible answers: \"ahead of\", \"to the left of\", \"to the right of\", \"behind\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"ahead of\"}"
+        ],
+        "latency_sec": 0.36530901491642
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "At the end, person 1 ends up _____ the robot compared to the beginning.",
+            "Possible answers: \"closer to\", \"further away from\", \"about the same distance to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"closer to\"}"
+        ],
+        "latency_sec": 0.3890946973115206
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "In the beginning, person 2 is _____ the robot.",
+            "Possible answers: \"ahead of\", \"to the left of\", \"to the right of\", \"behind\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"ahead of\"}"
+        ],
+        "latency_sec": 0.3715158775448799
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "At the end, person 2 is _____ the robot.",
+            "Possible answers: \"ahead of\", \"to the left of\", \"to the right of\", \"behind\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"ahead of\"}"
+        ],
+        "latency_sec": 0.3602542784065008
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "At the end, person 2 ends up _____ the robot compared to the beginning.",
+            "Possible answers: \"closer to\", \"further away from\", \"about the same distance to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"closer to\"}"
+        ],
+        "latency_sec": 0.3963600993156433
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "In the beginning, person 3 is _____ the robot.",
+            "Possible answers: \"ahead of\", \"to the left of\", \"to the right of\", \"behind\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"ahead of\"}"
+        ],
+        "latency_sec": 0.3702349532395601
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "At the end, person 3 is _____ the robot.",
+            "Possible answers: \"ahead of\", \"to the left of\", \"to the right of\", \"behind\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"ahead of\"}"
+        ],
+        "latency_sec": 0.3737160675227642
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "At the end, person 3 ends up _____ the robot compared to the beginning.",
+            "Possible answers: \"closer to\", \"further away from\", \"about the same distance to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"closer to\"}"
+        ],
+        "latency_sec": 0.39797533489763737
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "In the beginning, person 4 is _____ the robot.",
+            "Possible answers: \"ahead of\", \"to the left of\", \"to the right of\", \"behind\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"ahead of\"}"
+        ],
+        "latency_sec": 0.3730694651603699
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "At the end, person 4 is _____ the robot.",
+            "Possible answers: \"ahead of\", \"to the left of\", \"to the right of\", \"behind\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"ahead of\"}"
+        ],
+        "latency_sec": 0.37225714325904846
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "<i>Instructions:</i> This series of questions will ask you about the locations and movements of the robot and people shown in the video.",
+            "",
+            "If you can't see the person at the start of the video, please estimate their starting location based on the first seen location. For the end location, please do the same based on the last seen location.",
+            "",
+            "At the end, person 4 ends up _____ the robot compared to the beginning.",
+            "Possible answers: \"closer to\", \"further away from\", \"about the same distance to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"closer to\"}"
+        ],
+        "latency_sec": 0.38679126650094986
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The goal location is the place where the robot would like to make progress towards, denoted by G.",
+            "",
+            "The following question will ask about the goal and reasoning behind the robot's path to make progress to it.",
+            "",
+            "In this question, the robot's path to the goal refers to the quickest path for a robot to get to the location if there were no people present.",
+            "",
+            "In the beginning frame, the goal is ___ of the robot.",
+            "Possible answers: \"ahead\", \"to the left\", \"to the right\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"ahead\"}"
+        ],
+        "latency_sec": 0.3452914170920849
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The goal location is the place where the robot would like to make progress towards, denoted by G.",
+            "",
+            "The following question will ask about the goal and reasoning behind the robot's path to make progress to it.",
+            "",
+            "In this question, the robot's path to the goal refers to the quickest path for a robot to get to the location if there were no people present.",
+            "",
+            "At the end frame, the goal is ___ of the robot.",
+            "Possible answers: \"ahead\", \"to the left\", \"to the right\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"ahead\"}"
+        ],
+        "latency_sec": 0.3464247677475214
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The goal location is the place where the robot would like to make progress towards, denoted by G.",
+            "",
+            "The following question will ask about the goal and reasoning behind the robot's path to make progress to it.",
+            "",
+            "In this question, the robot's path to the goal refers to the quickest path for a robot to get to the location if there were no people present.",
+            "",
+            "Is person 1's path in the way of the robot's path to the goal?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.34556626342236996
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The goal location is the place where the robot would like to make progress towards, denoted by G.",
+            "",
+            "The following question will ask about the goal and reasoning behind the robot's path to make progress to it.",
+            "",
+            "In this question, the robot's path to the goal refers to the quickest path for a robot to get to the location if there were no people present.",
+            "",
+            "At the end frame, is person 1's position in the way of the robot's path to the goal?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.34707075357437134
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The goal location is the place where the robot would like to make progress towards, denoted by G.",
+            "",
+            "The following question will ask about the goal and reasoning behind the robot's path to make progress to it.",
+            "",
+            "In this question, the robot's path to the goal refers to the quickest path for a robot to get to the location if there were no people present.",
+            "",
+            "Is person 2's path in the way of the robot's path to the goal?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.34566283971071243
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The goal location is the place where the robot would like to make progress towards, denoted by G.",
+            "",
+            "The following question will ask about the goal and reasoning behind the robot's path to make progress to it.",
+            "",
+            "In this question, the robot's path to the goal refers to the quickest path for a robot to get to the location if there were no people present.",
+            "",
+            "At the end frame, is person 2's position in the way of the robot's path to the goal?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.34615232795476913
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The goal location is the place where the robot would like to make progress towards, denoted by G.",
+            "",
+            "The following question will ask about the goal and reasoning behind the robot's path to make progress to it.",
+            "",
+            "In this question, the robot's path to the goal refers to the quickest path for a robot to get to the location if there were no people present.",
+            "",
+            "Is person 3's path in the way of the robot's path to the goal?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.34670753590762615
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The goal location is the place where the robot would like to make progress towards, denoted by G.",
+            "",
+            "The following question will ask about the goal and reasoning behind the robot's path to make progress to it.",
+            "",
+            "In this question, the robot's path to the goal refers to the quickest path for a robot to get to the location if there were no people present.",
+            "",
+            "At the end frame, is person 3's position in the way of the robot's path to the goal?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.3455367889255285
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The goal location is the place where the robot would like to make progress towards, denoted by G.",
+            "",
+            "The following question will ask about the goal and reasoning behind the robot's path to make progress to it.",
+            "",
+            "In this question, the robot's path to the goal refers to the quickest path for a robot to get to the location if there were no people present.",
+            "",
+            "Is person 4's path in the way of the robot's path to the goal?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.34659438766539097
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The goal location is the place where the robot would like to make progress towards, denoted by G.",
+            "",
+            "The following question will ask about the goal and reasoning behind the robot's path to make progress to it.",
+            "",
+            "In this question, the robot's path to the goal refers to the quickest path for a robot to get to the location if there were no people present.",
+            "",
+            "At the end frame, is person 4's position in the way of the robot's path to the goal?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.34601711854338646
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "",
+            "Is the robot's movement affected by person 1?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.3306450881063938
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "Here we define navigation actions:",
+            "",
+            "avoiding: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not considering: Occurs when a person/robot is not taking into consideration another person/robot into consideration while navigating towards their goal.",
+            "following: Occurs when a person/robot is moving behind another person/robot.",
+            "overtaking: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yielding to: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "The robot is most likely ____ person 1.",
+            "Possible answers: \"avoiding\", \"overtaking\", \"not considering\", \"following\", \"yielding to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"not considering\"}"
+        ],
+        "latency_sec": 0.37365538999438286
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "",
+            "Is person 1's movement affected by the robot?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.330837395042181
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "Here we define navigation actions:",
+            "",
+            "avoiding: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not considering: Occurs when a person/robot is not taking into consideration another person/robot into consideration while navigating towards their goal.",
+            "following: Occurs when a person/robot is moving behind another person/robot.",
+            "overtaking: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yielding to: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "Person 1 is most likely ___ the robot.",
+            "Possible answers: \"avoiding\", \"overtaking\", \"not considering\", \"following\", \"yielding to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"not considering\"}"
+        ],
+        "latency_sec": 0.3911583833396435
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "",
+            "Is the robot's movement affected by person 2?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.3302377760410309
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "Here we define navigation actions:",
+            "",
+            "avoiding: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not considering: Occurs when a person/robot is not taking into consideration another person/robot into consideration while navigating towards their goal.",
+            "following: Occurs when a person/robot is moving behind another person/robot.",
+            "overtaking: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yielding to: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "The robot is most likely ____ person 2.",
+            "Possible answers: \"avoiding\", \"overtaking\", \"not considering\", \"following\", \"yielding to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"not considering\"}"
+        ],
+        "latency_sec": 0.39017004147171974
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "",
+            "Is person 2's movement affected by the robot?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.33309206180274487
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "Here we define navigation actions:",
+            "",
+            "avoiding: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not considering: Occurs when a person/robot is not taking into consideration another person/robot into consideration while navigating towards their goal.",
+            "following: Occurs when a person/robot is moving behind another person/robot.",
+            "overtaking: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yielding to: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "Person 2 is most likely ___ the robot.",
+            "Possible answers: \"avoiding\", \"overtaking\", \"not considering\", \"following\", \"yielding to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"not considering\"}"
+        ],
+        "latency_sec": 0.3883717209100723
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "",
+            "Is the robot's movement affected by person 3?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.33202257193624973
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "Here we define navigation actions:",
+            "",
+            "avoiding: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not considering: Occurs when a person/robot is not taking into consideration another person/robot into consideration while navigating towards their goal.",
+            "following: Occurs when a person/robot is moving behind another person/robot.",
+            "overtaking: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yielding to: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "The robot is most likely ____ person 3.",
+            "Possible answers: \"avoiding\", \"overtaking\", \"not considering\", \"following\", \"yielding to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"not considering\"}"
+        ],
+        "latency_sec": 0.39137933030724525
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "",
+            "Is person 3's movement affected by the robot?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.3295930102467537
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "Here we define navigation actions:",
+            "",
+            "avoiding: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not considering: Occurs when a person/robot is not taking into consideration another person/robot into consideration while navigating towards their goal.",
+            "following: Occurs when a person/robot is moving behind another person/robot.",
+            "overtaking: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yielding to: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "Person 3 is most likely ___ the robot.",
+            "Possible answers: \"avoiding\", \"overtaking\", \"not considering\", \"following\", \"yielding to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"not considering\"}"
+        ],
+        "latency_sec": 0.38458992168307304
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "",
+            "Is the robot's movement affected by person 4?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.3313379604369402
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "Here we define navigation actions:",
+            "",
+            "avoiding: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not considering: Occurs when a person/robot is not taking into consideration another person/robot into consideration while navigating towards their goal.",
+            "following: Occurs when a person/robot is moving behind another person/robot.",
+            "overtaking: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yielding to: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "The robot is most likely ____ person 4.",
+            "Possible answers: \"avoiding\", \"overtaking\", \"not considering\", \"following\", \"yielding to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"not considering\"}"
+        ],
+        "latency_sec": 0.3727682810276747
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "",
+            "Is person 4's movement affected by the robot?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.33085443265736103
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about determining the most likely navigation actions taken by the people and robot.",
+            "",
+            "Here we define navigation actions:",
+            "",
+            "avoiding: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not considering: Occurs when a person/robot is not taking into consideration another person/robot into consideration while navigating towards their goal.",
+            "following: Occurs when a person/robot is moving behind another person/robot.",
+            "overtaking: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yielding to: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "Person 4 is most likely ___ the robot.",
+            "Possible answers: \"avoiding\", \"overtaking\", \"not considering\", \"following\", \"yielding to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"not considering\"}"
+        ],
+        "latency_sec": 0.3921641409397125
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "",
+            "In the future (after the end of the video), should the robot's movement towards the goal be affected by person 1?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.3394806236028671
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "We again provide definitions for navigation actions:",
+            "",
+            "avoid: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not consider: Occurs when a person/robot is not taking another person/robot into consideration while navigating towards their goal.",
+            "follow: Occurs when a person/robot is moving behind another person/robot.",
+            "overtake: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yield To: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "In the future (after the end of the video), the robot should ____ person 1 as it makes progress towards the goal.",
+            "Possible answers: \"avoid\", \"overtake\", \"not consider\", \"follow\", \"yield to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"avoid\"}"
+        ],
+        "latency_sec": 0.36737240478396416
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "We again provide definitions for navigation actions:",
+            "",
+            "avoid: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not consider: Occurs when a person/robot is not taking another person/robot into consideration while navigating towards their goal.",
+            "follow: Occurs when a person/robot is moving behind another person/robot.",
+            "overtake: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yield To: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "In the future (after the end of the video), person 1 will most likely ____ the robot as the robot attempts to make progress towards the goal.",
+            "Possible answers: \"avoid\", \"overtake\", \"not consider\", \"follow\", \"yield to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"avoid\"}"
+        ],
+        "latency_sec": 0.34975344128906727
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "",
+            "In the future (after the end of the video), should the robot's movement towards the goal be affected by person 2?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.33824254013597965
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "We again provide definitions for navigation actions:",
+            "",
+            "avoid: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not consider: Occurs when a person/robot is not taking another person/robot into consideration while navigating towards their goal.",
+            "follow: Occurs when a person/robot is moving behind another person/robot.",
+            "overtake: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yield To: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "In the future (after the end of the video), the robot should ____ person 2 as it makes progress towards the goal.",
+            "Possible answers: \"avoid\", \"overtake\", \"not consider\", \"follow\", \"yield to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"avoid\"}"
+        ],
+        "latency_sec": 0.3522993680089712
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "We again provide definitions for navigation actions:",
+            "",
+            "avoid: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not consider: Occurs when a person/robot is not taking another person/robot into consideration while navigating towards their goal.",
+            "follow: Occurs when a person/robot is moving behind another person/robot.",
+            "overtake: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yield To: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "In the future (after the end of the video), person 2 will most likely ____ the robot as the robot attempts to make progress towards the goal.",
+            "Possible answers: \"avoid\", \"overtake\", \"not consider\", \"follow\", \"yield to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"avoid\"}"
+        ],
+        "latency_sec": 0.3527134209871292
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "",
+            "In the future (after the end of the video), should the robot's movement towards the goal be affected by person 3?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.3309882804751396
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "We again provide definitions for navigation actions:",
+            "",
+            "avoid: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not consider: Occurs when a person/robot is not taking another person/robot into consideration while navigating towards their goal.",
+            "follow: Occurs when a person/robot is moving behind another person/robot.",
+            "overtake: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yield To: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "In the future (after the end of the video), the robot should ____ person 3 as it makes progress towards the goal.",
+            "Possible answers: \"avoid\", \"overtake\", \"not consider\", \"follow\", \"yield to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"avoid\"}"
+        ],
+        "latency_sec": 0.36450825072824955
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "We again provide definitions for navigation actions:",
+            "",
+            "avoid: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not consider: Occurs when a person/robot is not taking another person/robot into consideration while navigating towards their goal.",
+            "follow: Occurs when a person/robot is moving behind another person/robot.",
+            "overtake: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yield To: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "In the future (after the end of the video), person 3 will most likely ____ the robot as the robot attempts to make progress towards the goal.",
+            "Possible answers: \"avoid\", \"overtake\", \"not consider\", \"follow\", \"yield to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"avoid\"}"
+        ],
+        "latency_sec": 0.36948293447494507
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "",
+            "In the future (after the end of the video), should the robot's movement towards the goal be affected by person 4?",
+            "Possible answers: \"yes\", \"no\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"yes\"}"
+        ],
+        "latency_sec": 0.3434428721666336
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "We again provide definitions for navigation actions:",
+            "",
+            "avoid: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not consider: Occurs when a person/robot is not taking another person/robot into consideration while navigating towards their goal.",
+            "follow: Occurs when a person/robot is moving behind another person/robot.",
+            "overtake: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yield To: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "In the future (after the end of the video), the robot should ____ person 4 as it makes progress towards the goal.",
+            "Possible answers: \"avoid\", \"overtake\", \"not consider\", \"follow\", \"yield to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"avoid\"}"
+        ],
+        "latency_sec": 0.3681476376950741
+    },
+    {
+        "entity": [
+            "user"
+        ],
+        "response": [
+            "Title: Navigating Through Crowds Survey",
+            "",
+            "This is a research survey about walking through crowds. You will be shown sequences of images of a robot navigating around people. The survey consists of multiple choice questions about the behavior of people and robots in a shared space.",
+            "",
+            "Survey Description & Instructions:",
+            "You will be shown an image representing a video of the scene, where top left is the first frame, the top right is the second frame, the bottom left is the third frame, and the bottom right is the fourth frame.",
+            "",
+            "The video is from the robot's perspective. Some visible people in the video have a unique circled number. The robot is generally moving forward but may turn or change its speed. We will ask you questions about this image.",
+            "",
+            "Instructions: The following questions will ask about what you think the robot should do next in the scene (after the end of the video) to make progress towards the goal.",
+            "",
+            "We again provide definitions for navigation actions:",
+            "",
+            "avoid: Occurs when a person/robot is moving away from the expected path of another person/robot.",
+            "not consider: Occurs when a person/robot is not taking another person/robot into consideration while navigating towards their goal.",
+            "follow: Occurs when a person/robot is moving behind another person/robot.",
+            "overtake: Occurs when a person/robot alters their path temporarily to get in front of another person/robot, often speeding up temporarily in the process and going back to their original direction in the end.",
+            "yield To: Occurs when a person/robot reduces their movement to let another person/robot pass.",
+            "",
+            "",
+            "In the future (after the end of the video), person 4 will most likely ____ the robot as the robot attempts to make progress towards the goal.",
+            "Possible answers: \"avoid\", \"overtake\", \"not consider\", \"follow\", \"yield to\"",
+            "Please provide the answer to the single question in JSON format (NOT a list) as follows:",
+            "{\"answer\": \"<one of the possible answers>\"}",
+            "",
+            "Ensure the response is in JSON format and includes only one key, \"answer\""
+        ]
+    },
+    {
+        "entity": [
+            "assistant"
+        ],
+        "response": [
+            "{\"answer\": \"avoid\"}"
+        ],
+        "latency_sec": 0.3620024360716343
+    }
+]

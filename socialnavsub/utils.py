@@ -3,6 +3,7 @@ import base64
 import csv
 import io
 import itertools
+from itertools import chain, combinations
 import json
 import math
 import os
@@ -1073,32 +1074,42 @@ def load_yaml(yaml_file: str):
 def load_model_class(baseline_model: str, 
                      model_to_api_key: dict = None,
                      use_cot: bool = False,
-                     quantization_bits: int = None):
+                     quantization_bits: int = None,
+                     config: dict = None):
     """
     Load the appropriate baseline model class based on the model name.
     
     :param baseline_model: The name of the baseline model to load.
-    :param api_key_env_var: Optional API key environment variable for GPT-4 based models.
+    :param model_to_api_key: Optional mapping e.g. {"gpt4o": "OPENAI_API_KEY", "gemini": "GOOGLE_API_KEY"}.
     :param use_cot: Whether to use chain-of-thought reasoning.
     :param quantization_bits: Quantization precision for Hugging Face models (4-bit or 8-bit).
+    :param config: Optional full config dict; used for openai_base_url / openai_api_key_env (GPT 中转).
     :return: An instance of the model class.
     """
+    config = config or {}
+    model_to_api_key = model_to_api_key or {}
     if ('gpt' in baseline_model.lower()) or ('o1' in baseline_model.lower()) or ('o3' in baseline_model.lower()) or ('o4' in baseline_model.lower()):
         from gpt4o import GPT4o as model_class
-        api_key_env_var = model_to_api_key.get('gpt4o')
-        api_key_env_var = api_key_env_var if api_key_env_var else ''
+        api_key_env_var = config.get('openai_api_key_env') or model_to_api_key.get('gpt4o') or 'OPENAI_API_KEY'
+        api_key_env_var = api_key_env_var if api_key_env_var else 'OPENAI_API_KEY'
         if api_key_env_var:
-            model = model_class(model_name=baseline_model,
-                                api_key_env_var=api_key_env_var)
+            model = model_class(
+                model_name=baseline_model,
+                api_key_env_var=api_key_env_var,
+                base_url=config.get('openai_base_url'),
+            )
         else:
             model = model_class()
     elif 'gemini' in baseline_model.lower():
         from gemini import Gemini as model_class
-        api_key_env_var = model_to_api_key.get('gemini')
-        api_key_env_var = api_key_env_var if api_key_env_var else ''
+        api_key_env_var = config.get('gemini_api_key_env') or model_to_api_key.get('gemini') or 'GOOGLE_API_KEY'
+        api_key_env_var = api_key_env_var if api_key_env_var else 'GOOGLE_API_KEY'
         if api_key_env_var:
+            # 支持 DMXAPI：gemini_base_url 或 openai_base_url 则走 chat/completions
+            base_url = config.get('gemini_base_url') or config.get('openai_base_url')
             model = model_class(model_name=baseline_model,
-                                api_key_env_var=api_key_env_var)
+                                api_key_env_var=api_key_env_var,
+                                base_url=base_url)
         else:
             model = model_class()
     elif baseline_model.lower() == 'spatialvlm':
@@ -1109,12 +1120,37 @@ def load_model_class(baseline_model: str,
         from llava import LLaVaBaseline
         model = LLaVaBaseline(model_name='llava-hf/llava-1.5-13b-hf', 
                               use_cot=use_cot,
-                              quantization_bits=quantization_bits)
+                              quant_bits=quantization_bits)
     elif baseline_model.lower() == 'llava-video':
         from llava import LLaVaBaseline
-        model = LLaVaBaseline(model_name="llava-hf/LLaVA-NeXT-Video-7B-hf", 
+        # 支持本地路径：config 里设 llava_video_path 则用本地，否则用 HF id
+        local_path = (config.get('llava_video_path') or '').strip()
+        model_name = os.path.expanduser(local_path) if local_path else "llava-hf/LLaVA-NeXT-Video-7B-hf"
+        model = LLaVaBaseline(model_name=model_name,
                               use_cot=use_cot,
-                              quantization_bits=quantization_bits)
+                              quant_bits=quantization_bits)
+    elif baseline_model.lower() == 'navila':
+        from navila import NaVILABaseline
+        navila_path = (config.get('navila_path') or '').strip()
+        if not navila_path:
+            raise ValueError('navila baseline requires config navila_path (e.g. checkpoints/navila-llama3-8b-8f)')
+        navila_path = os.path.expanduser(navila_path)
+        if not os.path.isabs(navila_path):
+            # relative to project root (cwd when running evaluate_vlm.py)
+            navila_path = os.path.abspath(navila_path)
+        model = NaVILABaseline(model_path=navila_path)
+    elif baseline_model.lower() in ('internvla', 'internvla_n1', 'internvla-n1-dualvln'):
+        from internvla import InternVLABaseline
+        internvla_path = (config.get('internvla_path') or '').strip()
+        if not internvla_path:
+            raise ValueError(
+                'internvla baseline requires config internvla_path (e.g. checkpoints/InternVLA-N1-DualVLN). '
+                'Install InternNav first: git clone https://github.com/InternRobotics/InternNav && cd InternNav && pip install -e .'
+            )
+        internvla_path = os.path.expanduser(internvla_path)
+        if not os.path.isabs(internvla_path):
+            internvla_path = os.path.abspath(internvla_path)
+        model = InternVLABaseline(model_path=internvla_path)
     elif baseline_model.lower() == 'dummy':
         from dummy import DummyBaseline
         model = DummyBaseline()

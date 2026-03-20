@@ -42,9 +42,17 @@ class CumulativeMetric:
         return np.std(self.values) / math.sqrt(len(self.values))
 
 
-def compute_averages_and_generate_csv(root_dir, survey_folder, entropy_threshold=0.5):
+def compute_averages_and_generate_csv(root_dir, survey_folder, entropy_threshold=0.5, experiment_folder_filter=None):
     # Step 1: Find all evaluation files grouped by experiment folder
     experiment_files = find_evaluation_files(root_dir)
+    if experiment_folder_filter is not None:
+        if experiment_folder_filter not in experiment_files:
+            raise ValueError(
+                f"Experiment folder '{experiment_folder_filter}' not found under {root_dir}. "
+                f"Available: {list(experiment_files.keys())}"
+            )
+        experiment_files = {experiment_folder_filter: experiment_files[experiment_folder_filter]}
+        print(f"Processing only experiment folder: {experiment_folder_filter}")
 
     all_models_full_experiment_results = []
 
@@ -714,9 +722,20 @@ if __name__ == "__main__":
         default='config.yaml',
         help='Path to the config file'
     )
+    parser.add_argument(
+        '--experiment_folder',
+        type=str,
+        default=None,
+        help='If set, only postprocess this experiment folder (e.g. experiment_3_gpt-5-nano_cot)'
+    )
     args = parser.parse_args()
     with open(args.cfg_path, 'r') as file:
         config = yaml.safe_load(file)
     evaluation_folder = config['evaluation_folder']
     survey_folder = config['survey_folder']
-    compute_averages_and_generate_csv(evaluation_folder, survey_folder, entropy_threshold=0.5)
+    compute_averages_and_generate_csv(
+        evaluation_folder,
+        survey_folder,
+        entropy_threshold=0.5,
+        experiment_folder_filter=args.experiment_folder,
+    )

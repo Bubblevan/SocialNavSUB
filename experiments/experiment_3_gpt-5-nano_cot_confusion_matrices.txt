@@ -1,0 +1,288 @@
+Base Question: q_robot_moving_direction
+
+VLM Predictions vs. Top-1 Human Labels:
+                                                     Top-1 Human Labels
+VLM Predictions                                    ('moving ahead', 'turning left')  ('moving ahead', 'turning left', 'turning right')  ('moving ahead', 'turning right')  ('moving ahead',)  ('turning left', 'turning right')  ('turning left',)  ('turning right',)  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+('moving ahead', 'turning left')                   2                                 0                                                  0                                  1                  0                                  0                  1                   
+('moving ahead', 'turning left', 'turning right')  0                                 0                                                  0                                  0                  0                                  0                  0                   
+('moving ahead', 'turning right')                  0                                 0                                                  0                                  1                  0                                  0                  0                   
+('moving ahead',)                                  4                                 0                                                  3                                  44                 0                                  4                  0                   
+('turning left', 'turning right')                  0                                 0                                                  0                                  0                  0                                  0                  0                   
+('turning left',)                                  0                                 0                                                  0                                  0                  0                                  0                  0                   
+('turning right',)                                 0                                 0                                                  0                                  0                  0                                  0                  0                   
+
+Human Predictions vs. Top-1 Human Labels:
+                                                     Top-1 Human Labels
+Human Predictions                                  ('moving ahead', 'turning left')  ('moving ahead', 'turning left', 'turning right')  ('moving ahead', 'turning right')  ('moving ahead',)  ('turning left', 'turning right')  ('turning left',)  ('turning right',)  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+('moving ahead', 'turning left')                   31                                0                                                  0                                  30                 0                                  8                  1                   
+('moving ahead', 'turning left', 'turning right')  0                                 0                                                  1                                  8                  0                                  2                  1                   
+('moving ahead', 'turning right')                  1                                 0                                                  15                                 41                 0                                  0                  2                   
+('moving ahead',)                                  10                                0                                                  9                                  318                0                                  6                  2                   
+('turning left', 'turning right')                  0                                 0                                                  2                                  2                  0                                  1                  0                   
+('turning left',)                                  10                                0                                                  2                                  13                 0                                  18                 1                   
+('turning right',)                                 1                                 0                                                  4                                  18                 0                                  1                  3                   
+
+Base Question: q_person_spatial_position_begin
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  ahead of  behind  to the left of  to the right of  
+--------------------------------------------------------------------
+ahead of         186       0       61              35               
+behind           5         0       0               1                
+to the left of   20        0       28              7                
+to the right of  29        0       9               18               
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  ahead of  behind  to the left of  to the right of  
+----------------------------------------------------------------------
+ahead of           1527      0       294             164              
+behind             132       0       45              37               
+to the left of     383       0       641             34               
+to the right of    344       0       49              378              
+
+Base Question: q_person_spatial_position_end
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  ahead of  behind  to the left of  to the right of  
+--------------------------------------------------------------------
+ahead of         104       64      72              50               
+behind           4         0       2               5                
+to the left of   14        9       16              11               
+to the right of  14        10      7               17               
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  ahead of  behind  to the left of  to the right of  
+----------------------------------------------------------------------
+ahead of           875       76      191             140              
+behind             122       507     189             166              
+to the left of     175       162     578             47               
+to the right of    195       93      32              480              
+
+Base Question: q_person_distance_change
+
+VLM Predictions vs. Top-1 Human Labels:
+                              Top-1 Human Labels
+VLM Predictions             about the same distance to  closer to  further away from  
+--------------------------------------------------------------------------------------
+about the same distance to  18                          32         18                 
+closer to                   33                          172        65                 
+further away from           16                          25         20                 
+
+Human Predictions vs. Top-1 Human Labels:
+                              Top-1 Human Labels
+Human Predictions           about the same distance to  closer to  further away from  
+--------------------------------------------------------------------------------------
+about the same distance to  399                         315        189                
+closer to                   155                         1502       238                
+further away from           138                         477        615                
+
+Base Question: q_goal_position_begin
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  ahead  to the left  to the right  
+---------------------------------------------------
+ahead            47     2            1             
+to the left      5      1            1             
+to the right     1      1            1             
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  ahead  to the left  to the right  
+-----------------------------------------------------
+ahead              440    13           9             
+to the left        55     28           0             
+to the right       47     0            20            
+
+Base Question: q_goal_position_end
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  ahead  to the left  to the right  
+---------------------------------------------------
+ahead            43     4            1             
+to the left      5      0            5             
+to the right     2      0            0             
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  ahead  to the left  to the right  
+-----------------------------------------------------
+ahead              400    14           10            
+to the left        59     25           6             
+to the right       53     0            45            
+
+Base Question: q_obstructing_path
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  no     yes    
+-------------------------------
+no               269    52     
+yes              45     33     
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  no     yes    
+---------------------------------
+no                 2751   247    
+yes                438    592    
+
+Base Question: q_obstructing_end_position
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  no     yes    
+-------------------------------
+no               314    40     
+yes              33     12     
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  no     yes    
+---------------------------------
+no                 3107   145    
+yes                404    372    
+
+Base Question: q_robot_affected
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  no     yes    
+-------------------------------
+no               218    32     
+yes              108    41     
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  no     yes    
+---------------------------------
+no                 2824   226    
+yes                490    488    
+
+Base Question: q_robot_action
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  avoiding  following  not considering  overtaking  yielding to  
+--------------------------------------------------------------------------------
+avoiding         18        5          44               0           2            
+following        3         2          17               0           0            
+not considering  29        11         178              0           1            
+overtaking       0         0          1                0           0            
+yielding to      17        5          66               0           0            
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  avoiding  following  not considering  overtaking  yielding to  
+----------------------------------------------------------------------------------
+avoiding           330       19         460              0           7            
+following          23        129        146              0           1            
+not considering    166       38         2234             0           5            
+overtaking         71        22         144              0           2            
+yielding to        63        26         127              0           15           
+
+Base Question: q_person_affected
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  no     yes    
+-------------------------------
+no               185    16     
+yes              164    34     
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  no     yes    
+---------------------------------
+no                 3044   169    
+yes                489    326    
+
+Base Question: q_person_action
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  avoiding  following  not considering  overtaking  yielding to  
+--------------------------------------------------------------------------------
+avoiding         16        0          72               0           0            
+following        3         0          3                0           0            
+not considering  20        0          154              1           1            
+overtaking       0         0          10               0           0            
+yielding to      25        0          93               1           0            
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  avoiding  following  not considering  overtaking  yielding to  
+----------------------------------------------------------------------------------
+avoiding           349       0          434              4           1            
+following          17        0          77               1           0            
+not considering    186       0          2516             5           3            
+overtaking         45        0          145              8           1            
+yielding to        56        0          173              2           5            
+
+Base Question: q_robot_suggested_affected
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  no     yes    
+-------------------------------
+no               196    21     
+yes              152    30     
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  no     yes    
+---------------------------------
+no                 3023   168    
+yes                497    340    
+
+Base Question: q_robot_suggested_action
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  avoid  follow  not consider  overtake  yield to  
+------------------------------------------------------------------
+avoid            4      3       54            2         1         
+follow           0      0       19            1         0         
+not consider     8      4       163           2         2         
+overtake         0      0       1             0         0         
+yield to         16     5       110           2         2         
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  avoid  follow  not consider  overtake  yield to  
+--------------------------------------------------------------------
+avoid              124    15      431           14        10        
+follow             12     52      136           10        5         
+not consider       84     21      2591          12        6         
+overtake           24     14      176           26        3         
+yield to           32     20      177           8         25        
+
+Base Question: q_human_future_action_prediction
+
+VLM Predictions vs. Top-1 Human Labels:
+                   Top-1 Human Labels
+VLM Predictions  avoid  follow  not consider  overtake  yield to  
+------------------------------------------------------------------
+avoid            1      0       61            0         0         
+follow           2      0       2             0         0         
+not consider     7      0       139           0         0         
+overtake         0      0       9             0         0         
+yield to         14     0       160           2         2         
+
+Human Predictions vs. Top-1 Human Labels:
+                     Top-1 Human Labels
+Human Predictions  avoid  follow  not consider  overtake  yield to  
+--------------------------------------------------------------------
+avoid              113    0       475           2         4         
+follow             7      0       98            3         0         
+not consider       78     0       2727          5         4         
+overtake           14     0       175           7         1         
+yield to           23     0       277           7         8         
+

@@ -1,0 +1,37 @@
+## 论文里提到的、**开源里基本都有的**
+
+| 论文位置 | 内容 | 代码/数据对应 |
+|----------|------|----------------|
+| **3.1** 挑战性场景 | 数据来自 SCAND、60 个场景等 | 通过**已处理好的数据集**提供，场景筛选本身不在仓库里 |
+| **3.2** 目标中心视觉表征 | 前视图+BEV、行人标注、轨迹 | `survey_loader.get_image_prompt`、`utils.get_annotated_and_bev`；卡尔曼在 `structures.py` |
+| **3.3** 三类 VQA 问题 | 空间/时空/社交推理 | `survey_loader` 的题目加载、`utils.REASONING_GROUPS` |
+| **3.4** 人类基线、PA/CWPA | 多标注者、PA、CWPA（共识加权） | `postprocess_results.py`：Human Oracle、**VLM/Human Probability of Agreement**、**Normalized …**（即 PA/CWPA） |
+| **4.1** 实验流程 | 输入一致、CoT、规则基线 | `evaluate_vlm.py`（method: independent / cot / cot_with_gt），`run_heuristic.py` 规则基线 |
+| **4.2** 主实验评估 | 表 1 类结果 | 跑 evaluate_vlm + postprocess 得到各模型 PA/CWPA、按推理类型聚合 |
+| **7.5** VQA 提示 | 图像序列 + 文本、CoT 顺序 | `survey_loader`、prompts 数据 |
+| **7.9** 消融（CoT、BEV） | No CoT、No BEV、真值 CoT | 改 config：`method`（independent=No CoT）、`prompt_img_type`（如 `img`=No BEV）、`cot_with_gt`=真值 CoT |
+| **7.10** 规则基线细节 | 空间/阻碍/动作等规则 | `run_heuristic.py` + config 里 `rulebased_baseline` |
+| **7.7 / 7.8** 问题与问题级结果 | 表 6–9 题目、表 10–12 结果 | 题目在 `survey_prompt.json` 等；`postprocess` 生成按 Base Question / Reasoning Group 的 CSV，对应表 10–12 的数据来源 |
+
+也就是说：**主实验（4.1–4.2）、人类/规则基线、PA/CWPA 指标、三类问题、CoT/BEV 消融、规则基线实现，都在当前开源里，可以复现论文主表和消融。**
+
+---
+
+## 论文里提到但**开源里没有或只有一部分的**
+
+| 论文位置 | 内容 | 现状 |
+|----------|------|------|
+| **7.1 路径点选择实验** | No Context / Random / Same-Model / Human Oracle 四种上下文，VLM 选路径点 vs 人类操作员一致率（表 3） | 没有独立实验脚本。`utils.compare_waypoints_pred_to_label` 等是 waypoint 比较/可视化，**没有**“四种上下文 + 路径点选择 + 准确率统计”的完整流程。 |
+| **7.2 挑战性场景筛选** | 从 SCAND 用 crowd size、近处人数、横向移动等加权打分筛 60 个场景 | 没有场景筛选脚本；只有**筛选后的数据**（通过 dataset 提供）。 |
+| **7.3 3D 姿态流水线验证** | PHALP + 卡尔曼在 CODa 上验证（位移误差等） | 代码里**没有 PHALP**，只有 `structures.py` 里的卡尔曼。3D 跟踪/轨迹应是**预处理好的**（如 `*_tracking_id_to_obj_label.json`、`traj_data.pkl` 等），CODa 上的验证脚本未开源。 |
+| **7.4 人类被试研究** | IRB、Prolific、153 人、问卷界面 | 属于实验设计与伦理，不是代码；**不预期**在仓库里。 |
+| **7.6 失败案例分析** | 按环境/动作的失败率（表 4、5）、图 9/10 式案例 | 没有现成“失败案例分析”脚本。但 `postprocess` 会输出 entropy、disagreement 等 CSV，**可以自己**按人类共识/熵筛失败案例并复现类似分析。 |
+
+---
+
+## 总结成一句话
+
+- **主实验、指标（PA/CWPA）、人类/规则基线、三类问题、CoT/BEV/真值 CoT 消融、规则基线实现**：开源里都有，可以复现论文主体和表 1、表 13 等。
+- **路径点选择实验（7.1）**：没有完整复现脚本。  
+- **场景筛选（7.2）、3D 姿态在 CODa 上的验证（7.3）**：没有开源；用的是**结果/预处理数据**。  
+- **失败案例分析（7.6）**：没有现成脚本，但可用现有 CSV 自己做。

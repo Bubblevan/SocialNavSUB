@@ -45,12 +45,14 @@ class GPT4o(APIBaseline):
 
     Adds support for embedding images as base64-encoded URLs
     and including past conversation history optionally.
+    When base_url is set (e.g. for DMXAPI 中转), uses /responses format.
     """
     def __init__(
         self,
         model_name: str,
         api_key_env_var: Optional[str] = None,
-        endpoint: Optional[str] = None
+        endpoint: Optional[str] = None,
+        base_url: Optional[str] = None
     ):
         """
         Initialize GPT-4o client.
@@ -59,14 +61,21 @@ class GPT4o(APIBaseline):
             model_name: Name of the GPT-4o model (e.g., 'gpt-4o').
             api_key_env_var: Environment variable name containing the API key.
             endpoint: Optional HTTP endpoint for the chat completion API.
+            base_url: Optional base URL for proxy/中转 (e.g. https://www.dmxapi.cn/v1).
+                     When set, endpoint becomes base_url/responses and DMXAPI request/response format is used.
         """
         super().__init__(model_name=model_name, api_key_env_var=api_key_env_var)
         self.model_name = model_name
         self.api_key = os.getenv(api_key_env_var) if api_key_env_var else None
         if not self.api_key:
             raise ValueError(f"API key not found in env var '{api_key_env_var}'")
-        self.endpoint = endpoint or "https://api.openai.com/v1/chat/completions"
-        self.logger = logging.getLogger(f"{__name__}.GPT4o")
+        self._use_dmxapi = bool(base_url)
+        if base_url:
+            self.endpoint = base_url.rstrip("/") + "/responses"
+            self.logger = logging.getLogger(f"{__name__}.GPT4o")
+        else:
+            self.endpoint = endpoint or "https://api.openai.com/v1/chat/completions"
+            self.logger = logging.getLogger(f"{__name__}.GPT4o")
 
     def encode_image(self, image_path: str) -> str:
         """
@@ -120,52 +129,86 @@ class GPT4o(APIBaseline):
     ) -> str:
         """
         Internal method to send a chat completion request.
-
-        Args:
-            text: Prompt text.
-            encoded_images: Base64 strings for images.
-            past_conversations: List of (role, message) tuples.
-        Returns:
-            Raw response content from the model.
+        Uses DMXAPI /responses format when base_url was set (中转).
         """
+        if self._use_dmxapi:
+            return self._call_dmxapi(text, encoded_images)
+        return self._call_openai(text, encoded_images)
+
+    def _call_dmxapi(self, text: str, encoded_images: List[str]) -> str:
+        """DMXAPI 中转: POST /v1/responses, input 数组格式，Authorization 仅 key."""
         headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer {self.api_key}"
+            "Authorization": self.api_key,
         }
-        # Build message blocks
+        content = [{"type": "input_text", "text": text}]
+        for img_b64 in encoded_images:
+            content.append({
+                "type": "input_image",
+                "image_url": f"data:image/jpeg;base64,{img_b64}"
+            })
+        payload = {
+            "model": self.model_name,
+            "input": [{"role": "user", "content": content}],
+            "stream": False,
+        }
+        try:
+            response = requests.post(self.endpoint, headers=headers, json=payload, timeout=120)
+            data = response.json()
+            if response.status_code != 200:
+                err = data.get("error", data.get("message", "Unknown error"))
+                if isinstance(err, dict):
+                    err = err.get("message", str(err))
+                raise Exception(f"Status {response.status_code}: {err}")
+            status = data.get("status")
+            if status != "completed":
+                raise Exception(f"DMXAPI status: {status}")
+            output = data.get("output", [])
+            for item in output:
+                if item.get("type") == "message":
+                    content_out = item.get("content")
+                    if isinstance(content_out, str):
+                        return content_out.strip()
+                    if isinstance(content_out, list):
+                        for block in content_out:
+                            if isinstance(block, dict) and block.get("type") == "output_text":
+                                return (block.get("text") or "").strip()
+                            if isinstance(block, dict) and "text" in block:
+                                return (block.get("text") or "").strip()
+            raise Exception("DMXAPI: no text in output")
+        except Exception as e:
+            self.logger.warning("DMXAPI call failed: %s. Retrying in 10s.", e)
+            time.sleep(10)
+            return self._call_dmxapi(text, encoded_images)
+
+    def _call_openai(self, text: str, encoded_images: List[str]) -> str:
+        """Official OpenAI chat/completions format."""
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {self.api_key}",
+        }
         user_block = [{"type": "text", "text": text}]
         for img_b64 in encoded_images:
             user_block.append({
                 "type": "image_url",
                 "image_url": {"url": f"data:image/jpeg;base64,{img_b64}"}
             })
-        messages = [{"role": "user", "content": user_block}]
-
-        # Append past conversation if available
-        # if past_conversations:
-        #     for role, msg in past_conversations:
-        #         messages.append({"role": role, "content": [{"type": "text", "text": msg}]})
-                
-        # assert past_conversations is None, "Past conversations are not supported for GPT-4o"
-
         payload = {
             "model": self.model_name,
-            "messages": messages,
-            "response_format": {"type": "json_object"}
+            "messages": [{"role": "user", "content": user_block}],
+            "response_format": {"type": "json_object"},
         }
-
         try:
-            response = requests.post(self.endpoint, headers=headers, json=payload)
+            response = requests.post(self.endpoint, headers=headers, json=payload, timeout=120)
             data = response.json()
             if response.status_code != 200:
-                err = data.get('error', {}).get('message', 'Unknown error')
+                err = data.get("error", {}).get("message", "Unknown error")
                 raise Exception(f"Status {response.status_code}: {err}")
-            return data['choices'][0]['message']['content']
-
+            return data["choices"][0]["message"]["content"]
         except Exception as e:
             self.logger.warning("API call failed: %s. Retrying in 10s.", e)
             time.sleep(10)
-            return self._call_api(text, encoded_images, past_conversations)
+            return self._call_openai(text, encoded_images)
 
 
 def main():

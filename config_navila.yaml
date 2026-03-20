@@ -1,0 +1,50 @@
+# NaVILA (VILA-Long 8B) 本地 checkpoint 评测
+baseline_model: "navila"
+navila_path: "checkpoints/navila-llama3-8b-8f"
+
+model_to_api_key: {"gpt4o": "OPENAI_API_KEY", "gemini": "GOOGLE_API_KEY"}
+method: "cot"
+survey_folder: data/human_labels
+dataset_folder: data/human_labels
+data_folder: data
+frontview_folder: data/front_view
+dataset_cfg_fp: data/dataset_cfg.yaml
+prompts_folder: data/prompts
+evaluation_folder: experiments
+postprocessed_results_csv: postprocessed_results.csv
+
+prompt_image_fp: grid_with_bev.png
+prompt_img_type: "img_with_bev"
+include_time_annotations_img: false
+include_time_annotations_bev: false
+
+circle_rad_annotated_img: 30
+thickness_annotated_img: 5
+font_scale_annotated_img: 1.3
+left_offset_annotated_img: 14
+markersize_bev: 20
+fontsize_bev: 15
+arrow_width_bev: 0.1
+fixed_arrow_length_bev: 0.5
+linewidth_bev: 3
+
+debug: false
+survey_prompt: "data/survey_prompt.json"
+
+rulebased_baseline:
+  blur_ksize: 5
+  hough_dp: 1.2
+  hough_minDist: 20
+  hough_param1: 100
+  hough_param2: 30
+  hough_minRadius: 10
+  hough_maxRadius: 60
+  tesseract_psm: 8
+  tesseract_oem: 3
+  tesseract_char_whitelist: "0123456789RG"
+  num_frames: 10
+  spatial_offset_threshold: 0.4
+  distance_change_threshold: 0.3
+  obstruction_distance_threshold: 0.1
+  robot_turn_threshold: 0.3
+  robot_move_threshold: 0.1

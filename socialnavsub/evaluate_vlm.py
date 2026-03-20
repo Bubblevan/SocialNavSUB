@@ -6,6 +6,11 @@ Loads survey data, prompts the model, computes metrics, and saves structured
 results for each sample.
 """
 import os
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 import json
 import base64
 import argparse
@@ -36,6 +41,13 @@ from utils import (
     save_debug_images,
     REASONING_GROUPS,
 )
+
+# DualVLN support
+try:
+    from dualvln_eval_integration import DualVLNEvaluator
+    DUALVLN_AVAILABLE = True
+except ImportError:
+    DUALVLN_AVAILABLE = False
 
 # Configure logging
 logging.basicConfig(
@@ -79,7 +91,21 @@ def evaluate_baseline(
         resume_folder: If provided, resume from an existing eval folder.
     """
     logger.info("Initializing evaluation: model=%s, method=%s", baseline_model, method)
-    model = load_model_class(baseline_model, model_to_api_key)
+
+    # Load model or DualVLN evaluator
+    if baseline_model.startswith('dualvln'):
+        if not DUALVLN_AVAILABLE:
+            raise ImportError("DualVLN support requested but adapter not available. "
+                            "Please ensure dualvln_adapter.py and dualvln_eval_integration.py are present.")
+        dualvln_outputs_dir = config.get('dualvln_outputs_dir', 'dualvln_outputs/')
+        if not os.path.exists(dualvln_outputs_dir):
+            raise FileNotFoundError(f"DualVLN outputs directory not found: {dualvln_outputs_dir}. "
+                                   f"Please run DualVLN on all samples and save outputs there.")
+        model = DualVLNEvaluator(dualvln_outputs_dir, config=config)
+        logger.info(f"Initialized DualVLN evaluator with outputs from {dualvln_outputs_dir}")
+    else:
+        model = load_model_class(baseline_model, model_to_api_key, config=config)
+
     assert method in ("independent", "cot", "cot_with_gt"), "Invalid method"
     
     dataset_cfg = config['dataset_cfg_fp']
@@ -153,6 +179,11 @@ def evaluate_baseline(
         validate_prompts_in_human_answers(a_dir, prompts)
 
         sample_id = os.path.basename(s_dir)
+
+        # Set sample_id for DualVLN evaluator
+        if baseline_model.startswith('dualvln'):
+            model.current_sample_id = sample_id
+
         logger.info("Processing sample %d/%d: %s", idx, len(sample_dirs), sample_id)
         out_dir = os.path.join(eval_base, sample_id)
         os.makedirs(out_dir, exist_ok=True)

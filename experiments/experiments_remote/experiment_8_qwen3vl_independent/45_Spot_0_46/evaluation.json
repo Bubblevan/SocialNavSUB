@@ -1,0 +1,350 @@
+{
+    "q_robot_moving_direction": {
+        "top_1_accuracy": 0.0,
+        "top_2_accuracy": 0.0,
+        "top_1_human_accuracy": 0.5,
+        "top_2_human_accuracy": 0.8,
+        "top_1_random_accuracy": 0.14285714285714285,
+        "top_2_random_accuracy": 0.2857142857142857,
+        "cross_entropy": 26.5754247590989,
+        "vlm_entropy": -0.0,
+        "human_entropy": 1.4854752972273344,
+        "latency_sec": 9.761430520564318,
+        "vlm_probabilities": {
+            "('moving ahead',)": 1.0,
+            "('turning left',)": 0.0,
+            "('turning right',)": 0.0,
+            "('moving ahead', 'turning left')": 0.0,
+            "('moving ahead', 'turning right')": 0.0,
+            "('turning left', 'turning right')": 0.0,
+            "('moving ahead', 'turning left', 'turning right')": 0.0
+        },
+        "human_probabilities": {
+            "('moving ahead',)": 0.2,
+            "('turning left',)": 0.3,
+            "('turning right',)": 0.0,
+            "('moving ahead', 'turning left')": 0.5,
+            "('moving ahead', 'turning right')": 0.0,
+            "('turning left', 'turning right')": 0.0,
+            "('moving ahead', 'turning left', 'turning right')": 0.0
+        }
+    },
+    "q_person_spatial_position_begin_p1": {
+        "top_1_accuracy": 1.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.8181818181818182,
+        "top_2_human_accuracy": 0.9090909090909092,
+        "top_1_random_accuracy": 0.25,
+        "top_2_random_accuracy": 0.5,
+        "cross_entropy": 6.0398692634315685,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.8658566174572235,
+        "latency_sec": 9.693065712228417,
+        "vlm_probabilities": {
+            "ahead of": 1.0,
+            "to the left of": 0.0,
+            "to the right of": 0.0,
+            "behind": 0.0
+        },
+        "human_probabilities": {
+            "ahead of": 0.8181818181818182,
+            "to the left of": 0.0,
+            "to the right of": 0.09090909090909091,
+            "behind": 0.09090909090909091
+        }
+    },
+    "q_person_spatial_position_end_p1": {
+        "top_1_accuracy": 1.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.8181818181818182,
+        "top_2_human_accuracy": 1.0,
+        "top_1_random_accuracy": 0.25,
+        "top_2_random_accuracy": 0.5,
+        "cross_entropy": 6.0398692634315685,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.6840384356390417,
+        "latency_sec": 9.63269468024373,
+        "vlm_probabilities": {
+            "ahead of": 1.0,
+            "to the left of": 0.0,
+            "to the right of": 0.0,
+            "behind": 0.0
+        },
+        "human_probabilities": {
+            "ahead of": 0.8181818181818182,
+            "to the left of": 0.18181818181818182,
+            "to the right of": 0.0,
+            "behind": 0.0
+        }
+    },
+    "q_person_distance_change_p1": {
+        "top_1_accuracy": 0.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.8181818181818182,
+        "top_2_human_accuracy": 0.9090909090909092,
+        "top_1_random_accuracy": 0.3333333333333333,
+        "top_2_random_accuracy": 0.6666666666666666,
+        "cross_entropy": 30.199346317157843,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.8658566174572235,
+        "latency_sec": 9.86721964366734,
+        "vlm_probabilities": {
+            "closer to": 1.0,
+            "further away from": 0.0,
+            "about the same distance to": 0.0
+        },
+        "human_probabilities": {
+            "closer to": 0.09090909090909091,
+            "further away from": 0.09090909090909091,
+            "about the same distance to": 0.8181818181818182
+        }
+    },
+    "q_goal_position_begin": {
+        "top_1_accuracy": 1.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.6363636363636364,
+        "top_2_human_accuracy": 1.0,
+        "top_1_random_accuracy": 0.3333333333333333,
+        "top_2_random_accuracy": 0.6666666666666666,
+        "cross_entropy": 12.079738526863137,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.9456603046006401,
+        "latency_sec": 9.703647810965776,
+        "vlm_probabilities": {
+            "ahead": 1.0,
+            "to the left": 0.0,
+            "to the right": 0.0
+        },
+        "human_probabilities": {
+            "ahead": 0.6363636363636364,
+            "to the left": 0.36363636363636365,
+            "to the right": 0.0
+        }
+    },
+    "q_goal_position_end": {
+        "top_1_accuracy": 1.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.7272727272727273,
+        "top_2_human_accuracy": 1.0,
+        "top_1_random_accuracy": 0.3333333333333333,
+        "top_2_random_accuracy": 0.6666666666666666,
+        "cross_entropy": 9.059803895147352,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.8453509366224364,
+        "latency_sec": 9.672848345711827,
+        "vlm_probabilities": {
+            "ahead": 1.0,
+            "to the left": 0.0,
+            "to the right": 0.0
+        },
+        "human_probabilities": {
+            "ahead": 0.7272727272727273,
+            "to the left": 0.2727272727272727,
+            "to the right": 0.0
+        }
+    },
+    "q_obstructing_path_p1": {
+        "top_1_accuracy": 1.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.8181818181818182,
+        "top_2_human_accuracy": 1.0,
+        "top_1_random_accuracy": 0.5,
+        "top_2_random_accuracy": 1.0,
+        "cross_entropy": 6.0398692634315685,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.6840384356390417,
+        "latency_sec": 9.554113309830427,
+        "vlm_probabilities": {
+            "yes": 1.0,
+            "no": 0.0
+        },
+        "human_probabilities": {
+            "yes": 0.8181818181818182,
+            "no": 0.18181818181818182
+        }
+    },
+    "q_obstructing_end_position_p1": {
+        "top_1_accuracy": 0.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.8181818181818182,
+        "top_2_human_accuracy": 1.0,
+        "top_1_random_accuracy": 0.5,
+        "top_2_random_accuracy": 1.0,
+        "cross_entropy": 27.17941168544206,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.6840384356390417,
+        "latency_sec": 9.55676201544702,
+        "vlm_probabilities": {
+            "yes": 0.0,
+            "no": 1.0
+        },
+        "human_probabilities": {
+            "yes": 0.8181818181818182,
+            "no": 0.18181818181818182
+        }
+    },
+    "q_robot_affected_p1": {
+        "top_1_accuracy": 0.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.5454545454545454,
+        "top_2_human_accuracy": 1.0,
+        "top_1_random_accuracy": 0.5,
+        "top_2_random_accuracy": 1.0,
+        "cross_entropy": 18.119607790294705,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.9940302114769565,
+        "latency_sec": 9.50108983181417,
+        "vlm_probabilities": {
+            "yes": 0.0,
+            "no": 1.0
+        },
+        "human_probabilities": {
+            "yes": 0.5454545454545454,
+            "no": 0.45454545454545453
+        }
+    },
+    "q_robot_action_p1": {
+        "top_1_accuracy": 0.0,
+        "top_2_accuracy": 0.0,
+        "top_1_human_accuracy": 0.5454545454545454,
+        "top_2_human_accuracy": 0.7272727272727273,
+        "top_1_random_accuracy": 0.2,
+        "top_2_random_accuracy": 0.4,
+        "cross_entropy": 33.219280948873624,
+        "vlm_entropy": -0.0,
+        "human_entropy": 1.6858157091530304,
+        "latency_sec": 9.612448705360293,
+        "vlm_probabilities": {
+            "avoiding": 1.0,
+            "overtaking": 0.0,
+            "not considering": 0.0,
+            "following": 0.0,
+            "yielding to": 0.0
+        },
+        "human_probabilities": {
+            "avoiding": 0.0,
+            "overtaking": 0.18181818181818182,
+            "not considering": 0.18181818181818182,
+            "following": 0.5454545454545454,
+            "yielding to": 0.09090909090909091
+        }
+    },
+    "q_person_affected_p1": {
+        "top_1_accuracy": 1.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.9090909090909091,
+        "top_2_human_accuracy": 1.0,
+        "top_1_random_accuracy": 0.5,
+        "top_2_random_accuracy": 1.0,
+        "cross_entropy": 3.0199346317157842,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.4394969869215134,
+        "latency_sec": 9.670851986855268,
+        "vlm_probabilities": {
+            "yes": 0.0,
+            "no": 1.0
+        },
+        "human_probabilities": {
+            "yes": 0.09090909090909091,
+            "no": 0.9090909090909091
+        }
+    },
+    "q_person_action_p1": {
+        "top_1_accuracy": 0.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.7272727272727273,
+        "top_2_human_accuracy": 1.0,
+        "top_1_random_accuracy": 0.2,
+        "top_2_random_accuracy": 0.4,
+        "cross_entropy": 24.159477053726274,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.8453509366224364,
+        "latency_sec": 9.65032702498138,
+        "vlm_probabilities": {
+            "avoiding": 1.0,
+            "overtaking": 0.0,
+            "not considering": 0.0,
+            "following": 0.0,
+            "yielding to": 0.0
+        },
+        "human_probabilities": {
+            "avoiding": 0.2727272727272727,
+            "overtaking": 0.0,
+            "not considering": 0.7272727272727273,
+            "following": 0.0,
+            "yielding to": 0.0
+        }
+    },
+    "q_robot_suggested_affected_p1": {
+        "top_1_accuracy": 0.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.8181818181818182,
+        "top_2_human_accuracy": 1.0,
+        "top_1_random_accuracy": 0.5,
+        "top_2_random_accuracy": 1.0,
+        "cross_entropy": 27.17941168544206,
+        "vlm_entropy": -0.0,
+        "human_entropy": 0.6840384356390417,
+        "latency_sec": 9.619421342387795,
+        "vlm_probabilities": {
+            "yes": 0.0,
+            "no": 1.0
+        },
+        "human_probabilities": {
+            "yes": 0.8181818181818182,
+            "no": 0.18181818181818182
+        }
+    },
+    "q_robot_suggested_action_p1": {
+        "top_1_accuracy": 0.0,
+        "top_2_accuracy": 0.0,
+        "top_1_human_accuracy": 0.2727272727272727,
+        "top_2_human_accuracy": 0.5454545454545454,
+        "top_1_random_accuracy": 0.2,
+        "top_2_random_accuracy": 0.4,
+        "cross_entropy": 30.19934631715784,
+        "vlm_entropy": -0.0,
+        "human_entropy": 2.1626441180472606,
+        "latency_sec": 9.697128539904952,
+        "vlm_probabilities": {
+            "avoid": 1.0,
+            "overtake": 0.0,
+            "not consider": 0.0,
+            "follow": 0.0,
+            "yield to": 0.0
+        },
+        "human_probabilities": {
+            "avoid": 0.09090909090909091,
+            "overtake": 0.2727272727272727,
+            "not consider": 0.2727272727272727,
+            "follow": 0.2727272727272727,
+            "yield to": 0.09090909090909091
+        }
+    },
+    "q_human_future_action_prediction_p1": {
+        "top_1_accuracy": 0.0,
+        "top_2_accuracy": 1.0,
+        "top_1_human_accuracy": 0.36363636363636365,
+        "top_2_human_accuracy": 0.6363636363636364,
+        "top_1_random_accuracy": 0.2,
+        "top_2_random_accuracy": 0.4,
+        "cross_entropy": 24.159477053726274,
+        "vlm_entropy": -0.0,
+        "human_entropy": 1.867633890971212,
+        "latency_sec": 9.815237184986472,
+        "vlm_probabilities": {
+            "avoid": 1.0,
+            "overtake": 0.0,
+            "not consider": 0.0,
+            "follow": 0.0,
+            "yield to": 0.0
+        },
+        "human_probabilities": {
+            "avoid": 0.2727272727272727,
+            "overtake": 0.0,
+            "not consider": 0.36363636363636365,
+            "follow": 0.09090909090909091,
+            "yield to": 0.2727272727272727
+        }
+    }
+}
